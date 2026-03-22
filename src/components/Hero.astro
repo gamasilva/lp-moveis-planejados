@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import heroBg from '../assets/hero-bg.jpg';
+import loggomoveis from '../assets/loggomoveis.png';
+---
+
+<section
+  class="relative w-full min-h-[90vh] flex flex-col items-center justify-center pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-black"
+  id="hero"
+>
+  <!-- Background Image Cover -->
+  <div class="absolute inset-0 z-0">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40 z-10"
+    >
+    </div>
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50 z-10"
+    >
+    </div>
+    <Image 
+      src={heroBg} 
+      alt="Ambiente planejado de alto padrão" 
+      format="webp"
+      quality={60}
+      widths={[860, 1280]}
+      sizes="(max-width: 768px) 860px, 1280px"
+      class="absolute inset-0 w-full h-full object-cover opacity-40 -z-10"
+      loading="eager" 
+      fetchpriority="high"
+      decoding="sync"
+    />
+  </div>
+
+  <div
+    class="max-w-7xl mx-auto px-4 flex flex-col relative z-10 w-full items-center text-center"
+  >
+    <Image
+      src={loggomoveis}
+      alt="Logotipo Modular Montagens Pensadas"
+      format="webp"
+      quality={80}
+      widths={[200, 400]}
+      sizes="(max-width: 640px) 200px, 400px"
+      class="h-28 sm:h-48 md:h-72 mb-2 md:mb-6 object-contain drop-shadow-2xl scale-[2] sm:scale-200 md:scale-125"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <h1
+      class="font-heading text-4xl sm:text-5xl md:text-6xl text-white font-bold tracking-tight mb-4 md:mb-6 max-w-4xl text-balance mt-4 sm:mt-0"
+    >
+      Montagens Pensadas para o seu Estilo de Vida.
+    </h1>
+    <p
+      class="text-neutral-200 text-base sm:text-lg md:text-xl font-sans mb-8 md:mb-10 max-w-2xl text-balance leading-relaxed"
+    >
+      Do projeto à execução impecável. Materiais nobres, montagem silenciosa e
+      precisão milimétrica para transformar seu ambiente em Cuiabá. Sem dor de
+      cabeça, sem atrasos.
+    </p>
+
+    <div class="flex items-center justify-center w-full">
+      <a
+        href="https://wa.me/556584772460?text=Olá,%20gostaria%20de%20solicitar%20um%20projeto%20com%20a%20Modular%20Montagens."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Solicitar orçamento pelo WhatsApp"
+        class="bg-[#C5A03F] text-black rounded-full px-8 py-4 flex items-center justify-center font-semibold gap-2 hover:shadow-[0_0_15px_#C5A03F] transition-all w-full sm:w-auto"
+      >
+        <span class="text-lg">Solicitar Orçamento</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 flex-shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

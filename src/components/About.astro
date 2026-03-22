@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+---
+<section class="w-full py-24 bg-neutral-950 border-t border-neutral-900" id="sobre">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-16 md:flex-row w-full">
+    
+    <div class="w-full md:w-1/2 flex flex-col relative">
+      <div class="absolute -left-6 -top-6 w-24 h-24 border-t-2 border-l-2 border-[#C5A03F] opacity-30"></div>
+      
+      <h2 class="font-heading text-4xl sm:text-5xl text-white font-bold tracking-tight mb-4 mt-8 md:mt-0">Quem Somos</h2>
+      <h3 class="text-[#C5A03F] text-xl font-semibold mb-8 tracking-widest uppercase text-sm">A Essência da Modular Montagens Pensadas</h3>
+      
+      <div class="text-neutral-400 text-lg space-y-6 leading-relaxed">
+        <p>A <strong class="text-white">Modular Montagens Pensadas</strong> não é apenas uma marcenaria convencional. Nascemos com o propósito de elevar o padrão de execução do mobiliário em Cuiabá, atuando como um estúdio de engenharia de interiores dedicado a esculpir o seu espaço.</p>
+        <p>Acreditamos que o verdadeiro luxo reside nos detalhes que os olhos não veem de relance, mas que a sua experiência diária comprova: a precisão cirúrgica de um encaixe, o silêncio de uma gaveta com amortecimento, a imponência de um painel contínuo estrutural.</p>
+        <p>Sob o escrutínio de extrema qualidade, cada projeto se transforma através da nossa equipe experiente e dedicada em obras arquitetônicas que se integram de forma definitiva ao seu refúgio e ao seu estilo exclusivo de ver o mundo.</p>
+      </div>
+
+      <div class="mt-12 flex gap-12 border-t border-neutral-900 pt-8">
+        <div class="flex flex-col">
+          <span class="text-white text-4xl font-heading font-bold">+10</span>
+          <span class="text-neutral-500 text-sm uppercase tracking-widest mt-2 font-semibold">Anos de Origem</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-white text-4xl font-heading font-bold">+500</span>
+          <span class="text-neutral-500 text-sm uppercase tracking-widest mt-2 font-semibold">Projetos Exclusivos</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="w-full md:w-1/2 relative h-[500px] md:h-[650px] group">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 rounded-xl pointer-events-none"></div>
+      <Image src="https://i.ibb.co/xtdrzNjD/Whats-App-Image-2026-03-14-at-13-04-30-1.jpg" alt="Oficina de Marcenaria e Execução" format="webp" quality={80} width={800} height={1067} loading="lazy" decoding="async" class="w-full h-full object-cover rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-neutral-800 transition-transform duration-700 group-hover:scale-105" />
+      
+      <div class="absolute bottom-8 left-8 right-8 z-20">
+        <div class="bg-black/80 backdrop-blur-md border border-neutral-800 p-6 rounded-lg pointer-events-none">
+          <p class="text-white font-heading font-bold text-xl italic leading-snug">"Onde a engenharia milimétrica encontra com o design."</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>

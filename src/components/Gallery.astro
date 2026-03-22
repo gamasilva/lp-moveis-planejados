@@ -1,0 +1,247 @@
+---
+import { Image } from 'astro:assets';
+
+const imageUrls = [
+  "https://i.ibb.co/d0By89rG/Whats-App-Image-2026-02-26-at-18-02-20-1.jpg",
+  "https://i.ibb.co/Y7jhLsHy/Whats-App-Image-2026-02-26-at-18-02-22.jpg",
+  "https://i.ibb.co/GQKHVfbd/Whats-App-Image-2026-02-26-at-18-02-23-1.jpg",
+  "https://i.ibb.co/yncsDs2X/Whats-App-Image-2026-02-26-at-18-02-23-2.jpg",
+  "https://i.ibb.co/KxB3LrTV/Whats-App-Image-2026-02-26-at-18-02-23.jpg",
+  "https://i.ibb.co/C52B6nwq/Whats-App-Image-2026-02-26-at-18-02-24-1.jpg",
+  "https://i.ibb.co/q3NYRQrW/Whats-App-Image-2026-02-26-at-18-02-24-2.jpg",
+  "https://i.ibb.co/LX69ggtk/Whats-App-Image-2026-02-26-at-18-02-24.jpg",
+  "https://i.ibb.co/sJMCmHhS/Whats-App-Image-2026-02-26-at-18-02-25.jpg",
+  "https://i.ibb.co/pYjXV4g/Whats-App-Image-2026-03-14-at-12-56-53.jpg",
+  "https://i.ibb.co/gbMstPCx/Whats-App-Image-2026-03-14-at-12-56-54-1.jpg",
+  "https://i.ibb.co/Hfp3MkLr/Whats-App-Image-2026-03-14-at-12-56-54.jpg",
+  "https://i.ibb.co/kkzfdbz/Whats-App-Image-2026-03-14-at-12-56-55.jpg",
+  "https://i.ibb.co/9HMhT93K/Whats-App-Image-2026-03-14-at-12-57-38.jpg",
+  "https://i.ibb.co/ycq8GJLQ/Whats-App-Image-2026-03-14-at-13-04-25.jpg",
+  "https://i.ibb.co/4RSZGdX5/Whats-App-Image-2026-03-14-at-13-04-26.jpg",
+  "https://i.ibb.co/Gv5DH8q7/Whats-App-Image-2026-03-14-at-13-04-27-1.jpg",
+  "https://i.ibb.co/NgydFLFR/Whats-App-Image-2026-03-14-at-13-04-27.jpg",
+  "https://i.ibb.co/ZzbynHMk/Whats-App-Image-2026-03-14-at-13-04-28-1.jpg",
+  "https://i.ibb.co/Jjpp0mPT/Whats-App-Image-2026-03-14-at-13-04-28-2.jpg",
+  "https://i.ibb.co/FLyYJg3P/Whats-App-Image-2026-03-14-at-13-04-28.jpg",
+  "https://i.ibb.co/kVymCCv9/Whats-App-Image-2026-03-14-at-13-04-29-1.jpg",
+  "https://i.ibb.co/wZ6q42r5/Whats-App-Image-2026-03-14-at-13-04-29.jpg",
+  "https://i.ibb.co/xtdrzNjD/Whats-App-Image-2026-03-14-at-13-04-30-1.jpg",
+  "https://i.ibb.co/KphMBKvs/Whats-App-Image-2026-03-14-at-13-04-30.jpg",
+  "https://i.ibb.co/p6yzxLY8/Whats-App-Image-2026-03-14-at-13-04-31-1.jpg",
+  "https://i.ibb.co/hRQCfR1z/Whats-App-Image-2026-03-14-at-13-04-31.jpg",
+  "https://i.ibb.co/hF8ThPSG/Whats-App-Image-2026-03-14-at-13-04-32-1.jpg",
+  "https://i.ibb.co/xtmn4xvR/Whats-App-Image-2026-03-14-at-13-04-32.jpg",
+  "https://i.ibb.co/8DKmXGc8/Whats-App-Image-2026-03-14-at-13-04-33-2.jpg",
+  "https://i.ibb.co/GfRHD9wB/Whats-App-Image-2026-03-14-at-13-04-33.jpg",
+  "https://i.ibb.co/tPbN5PZL/Whats-App-Image-2026-03-14-at-13-04-34.jpg",
+  "https://i.ibb.co/wF7scMPQ/Whats-App-Image-2026-03-17-at-07-52-32.jpg",
+  "https://i.ibb.co/DPDv6VGz/Whats-App-Image-2026-03-18-at-19-56-36.jpg",
+  "https://i.ibb.co/7xDHTHT8/Whats-App-Image-2026-03-18-at-19-56-37-1.jpg",
+  "https://i.ibb.co/bMcT1x9j/Whats-App-Image-2026-03-18-at-19-56-37-2.jpg",
+  "https://i.ibb.co/FqLyFsCS/Whats-App-Image-2026-03-18-at-19-56-37.jpg",
+  "https://i.ibb.co/20JJvZ4Y/Whats-App-Image-2026-03-18-at-19-56-38-1.jpg",
+  "https://i.ibb.co/Q76RwTkR/Whats-App-Image-2026-03-18-at-19-56-38.jpg"
+];
+
+// Otimiza exibição dividindo a carga horizonal
+const row1 = imageUrls.slice(0, 20);
+const row2 = imageUrls.slice(20, 39);
+
+// Calcula dinamicamente larguras artísticas variadas para a linha
+function getWidthClass(i: number) {
+  if (i % 6 === 0) return 'w-[85vw] sm:w-[500px] md:w-[700px] aspect-[16/9]'; 
+  if (i % 3 === 0) return 'w-[70vw] sm:w-[400px] md:w-[450px] aspect-[3/4]';
+  return 'w-[75vw] sm:w-[450px] md:w-[550px] aspect-square';
+}
+---
+
+<style>
+  /* Esconde a scrollbar feia nativa dos navagedores */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+</style>
+
+<section class="w-full py-24 bg-black border-t border-neutral-900 overflow-hidden relative" id="projetos">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col mb-12 w-full relative z-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div class="flex flex-col">
+        <h2 class="font-heading text-4xl sm:text-5xl text-white font-bold tracking-tight mb-4">A Realidade Supera a Expectativa.</h2>
+        <p class="text-neutral-400 text-lg max-w-2xl text-balance">Esqueça projetos de gaveta que só ficam bonitos no computador. Veja o nível de acabamento das nossas entregas reais em Cuiabá.</p>
+        <div class="mt-6 flex items-center gap-3 text-[#C5A03F] md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+          <span class="text-sm font-bold uppercase tracking-widest">Deslize para explorar</span>
+        </div>
+      </div>
+      
+      <!-- Controles de Scroll Customizados -->
+      <div class="hidden md:flex gap-4">
+        <button id="scroll-left" class="w-14 h-14 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-[#C5A03F] hover:text-[#C5A03F] transition-all bg-black shadow-lg" aria-label="Rolar para esquerda">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button id="scroll-right" class="w-14 h-14 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-[#C5A03F] hover:text-[#C5A03F] transition-all bg-black shadow-lg" aria-label="Rolar para direita">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-6 w-full relative z-10">
+    <!-- Overlay de Fade nas bordas para estética Premium -->
+    <div class="absolute left-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none"></div>
+
+    <!-- Linha 1 (Arrasta Livre) -->
+    <div class="flex overflow-x-auto gap-4 md:gap-6 snap-x snap-mandatory no-scrollbar px-4 md:px-[6vw] w-full scroll-smooth" id="gallery-track-1">
+      {row1.map((url, i) => (
+        <div class={`relative group flex-shrink-0 snap-center rounded-xl cursor-pointer bg-neutral-900 border border-neutral-800 overflow-hidden h-[45vh] sm:h-[400px] md:h-[500px] ${getWidthClass(i)}`} data-gallery-item>
+          <Image 
+            src={url} 
+            alt={`Modular Projeto ${i+1}`}
+            format="webp"
+            quality={65}
+            width={500}
+            height={375}
+            loading={i < 3 ? "eager" : "lazy"}
+            decoding="async" 
+            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-0 md:opacity-30 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div class="absolute bottom-6 left-6 translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
+            <h3 class="text-white font-bold text-2xl font-heading mb-2">P-0{String(i+1).padStart(2,'0')}</h3>
+            <span class="text-[#C5A03F] text-sm uppercase tracking-widest font-semibold flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              Inspecionar Obra
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Linha 2 (Arrasta Livre) -->
+    <div class="flex overflow-x-auto gap-4 md:gap-6 snap-x snap-mandatory no-scrollbar px-4 md:px-[6vw] w-full scroll-smooth" id="gallery-track-2" style="padding-left: 12vw;">
+      {row2.map((url, i) => (
+        <div class={`relative group flex-shrink-0 snap-center rounded-xl cursor-pointer bg-neutral-900 border border-neutral-800 overflow-hidden h-[45vh] sm:h-[400px] md:h-[500px] ${getWidthClass(i+3)}`} data-gallery-item>
+          <Image 
+            src={url} 
+            alt={`Modular Projeto ${i+21}`}
+            format="webp"
+            quality={65}
+            width={500}
+            height={375}
+            loading="lazy" 
+            decoding="async" 
+            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-0 md:opacity-30 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div class="absolute bottom-6 left-6 translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
+            <h3 class="text-white font-bold text-2xl font-heading mb-2">P-0{String(i+21).padStart(2,'0')}</h3>
+            <span class="text-[#C5A03F] text-sm uppercase tracking-widest font-semibold flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              Inspecionar Obra
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+
+  <div class="mt-16 flex items-center justify-center w-full px-4 max-w-7xl mx-auto relative z-10">
+    <a 
+      href="https://wa.me/556584772460?text=Olá,%20gostaria%20de%20solicitar%20um%20projeto%20com%20a%20Modular%20Montagens."
+      class="bg-[#C5A03F] text-black rounded-full px-8 py-4 flex items-center justify-center font-semibold gap-2 hover:shadow-[0_0_15px_#C5A03F] transition-all w-full sm:w-auto"
+    >
+      <span>Desejo um Projeto Exclusivo</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Fullscreen Lightbox -->
+  <dialog id="lightbox" class="backdrop:bg-black/95 bg-transparent w-full h-full max-w-none max-h-none m-0 p-0 fixed inset-0 z-50 flex-col items-center justify-center opacity-0 transition-opacity duration-300 hidden [&[open]]:flex">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col w-full h-full relative items-center justify-center">
+      <button id="close-lightbox" class="absolute top-6 right-6 text-neutral-400 hover:text-[#C5A03F] z-50 p-2 flex items-center justify-center bg-black/50 rounded-full" aria-label="Fechar galeria">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <img id="lightbox-img" src="" alt="Projeto em tela cheia" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.8)] transition-opacity duration-300" />
+    </div>
+  </dialog>
+</section>
+
+<script>
+  // Script para controle de scroll e lightbox
+  const track1 = document.getElementById('gallery-track-1');
+  const track2 = document.getElementById('gallery-track-2');
+  const btnLeft = document.getElementById('scroll-left');
+  const btnRight = document.getElementById('scroll-right');
+  
+  const items = document.querySelectorAll('[data-gallery-item]');
+  const dialog = document.getElementById('lightbox') as HTMLDialogElement;
+  const dialogImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const closeBtn = document.getElementById('close-lightbox');
+
+  const SCROLL_AMOUNT = 600;
+
+  if (btnLeft && track1 && track2) {
+    btnLeft.addEventListener('click', () => {
+      track1.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+      track2.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+  }
+
+  if (btnRight && track1 && track2) {
+    btnRight.addEventListener('click', () => {
+      track1.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+      track2.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (img && dialog && dialogImg) {
+        dialogImg.src = img.src;
+        dialogImg.alt = img.alt || 'Projeto Modular';
+        dialog.showModal();
+        dialog.classList.remove('opacity-0', 'hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  if (closeBtn && dialog) {
+    const closeModal = () => {
+      dialog.classList.add('opacity-0');
+      setTimeout(() => {
+        dialog.close();
+        dialog.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) closeModal();
+    });
+  }
+</script>

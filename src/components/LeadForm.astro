@@ -1,0 +1,143 @@
+---
+---
+<section class="w-full py-20 bg-black border-t border-neutral-900" id="contato">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col w-full">
+    <div class="flex flex-col md:flex-row gap-16 lg:gap-24 w-full items-start">
+      <div class="flex-1 flex flex-col w-full">
+        <div class="inline-flex items-center gap-3 mb-6">
+          <span class="h-px w-8 bg-[#C5A03F]"></span>
+          <span class="text-[#C5A03F] uppercase tracking-widest text-xs font-bold">Contato Direto</span>
+        </div>
+        <h2 class="font-heading text-4xl md:text-5xl text-white font-bold tracking-tight mb-6">Pronto para valorizar o seu imóvel?</h2>
+        <p class="text-neutral-400 text-lg mb-10 leading-relaxed md:max-w-md">
+          Não se preocupe com a trena. Nossa equipe cuida de todas as medidas do seu espaço. Agende uma visita técnica sem compromisso.
+        </p>
+        
+        <div class="flex flex-col gap-6 w-full">
+          <p class="flex items-center gap-4 text-neutral-400 text-lg hover:text-[#C5A03F] transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0 text-[#C5A03F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span class="font-bold tracking-tight">contato@modularmontagens.com.br</span>
+          </p>
+          <p class="flex items-center gap-4 text-neutral-400 text-lg hover:text-[#C5A03F] transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0 text-[#C5A03F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span class="font-bold tracking-tight">+55 65 8477-2460</span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex-1 w-full bg-neutral-900 border border-neutral-800 rounded-xl p-8 relative flex flex-col">
+        <form id="lead-form" class="flex flex-col gap-8 w-full" action="#" method="POST">
+          <div class="flex flex-col w-full relative group">
+            <label for="nome" class="text-neutral-400 text-sm mb-2 font-bold tracking-tight">Seu Nome Completo</label>
+            <input 
+              type="text" 
+              id="nome" 
+              name="nome" 
+              required
+              class="w-full bg-black border border-neutral-800 rounded-xl py-4 px-4 text-white text-lg focus:outline-none focus:border-[#C5A03F] transition-colors"
+              placeholder="Ex: João da Silva"
+            />
+          </div>
+          
+          <div class="flex flex-col w-full relative group">
+            <label for="whatsapp" class="text-neutral-400 text-sm mb-2 font-bold tracking-tight">Seu WhatsApp</label>
+            <input 
+              type="tel" 
+              id="whatsapp" 
+              name="whatsapp" 
+              required
+              class="w-full bg-black border border-neutral-800 rounded-xl py-4 px-4 text-white text-lg focus:outline-none focus:border-[#C5A03F] transition-colors"
+              placeholder="(65) 90000-0000"
+            />
+          </div>
+          
+          <div class="flex flex-col w-full relative group">
+            <label for="ambiente" class="text-neutral-400 text-sm mb-2 font-bold tracking-tight">Ambiente Desejado</label>
+            <div class="relative w-full flex flex-col">
+              <select 
+                id="ambiente" 
+                name="ambiente" 
+                required
+                class="w-full bg-black border border-neutral-800 rounded-xl py-4 px-4 text-white text-lg focus:outline-none focus:border-[#C5A03F] transition-colors appearance-none cursor-pointer"
+              >
+                <option value="" disabled selected hidden>Qual ambiente você deseja planejar?</option>
+                <option value="Cozinha">Cozinha Gourmet</option>
+                <option value="Quarto">Dormitório / Closet</option>
+                <option value="Sala">Home Theater / Sala</option>
+                <option value="Banheiro">Banheiro</option>
+                <option value="Corporativo">Ambiente Corporativo</option>
+                <option value="Outro">Outro</option>
+              </select>
+              <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0 text-[#C5A03F]" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button 
+            type="submit" 
+            id="submit-btn"
+            class="bg-[#C5A03F] text-black rounded-full px-8 py-4 flex items-center justify-center font-semibold w-full gap-2 transition-all hover:shadow-[0_0_15px_#C5A03F] mt-2"
+          >
+            <span>Falar com um Especialista</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+          <div id="form-msg" class="hidden text-lg mt-4 text-center font-bold tracking-tight w-full"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('lead-form') as HTMLFormElement;
+  const msg = document.getElementById('form-msg');
+  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const btnText = btn?.querySelector('span');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+    
+    if (btnText) btnText.innerText = 'Enviando...';
+    
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      await fetch('https://n8n.seuservidor.com/webhook/landing-page-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      }).catch(err => console.log('Mock n8n webhook', err));
+      
+      await new Promise(resolve => setTimeout(resolve, 800));
+
+      if (msg && btnText) {
+        msg.classList.remove('hidden', 'text-red-500');
+        msg.classList.add('text-green-500');
+        msg.innerText = 'Solicitação enviada com sucesso! Logo entraremos em contato.';
+        btnText.innerText = 'Enviado';
+        form.reset();
+      }
+    } catch (error) {
+       if (msg && btnText) {
+        msg.classList.remove('hidden', 'text-green-500');
+        msg.classList.add('text-red-500');
+        msg.innerText = 'Erro ao enviar. Tente diretamente pelo WhatsApp.';
+        btnText.innerText = 'Tente Novamente';
+      }
+    }
+  });
+</script>

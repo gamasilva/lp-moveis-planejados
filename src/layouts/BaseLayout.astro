@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+import heroBgSrc from '../assets/hero-bg.jpg';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const siteUrl = "https://moveisplanejadosluxo.com.br";
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preload da imagem hero (LCP) -->
+    <link rel="preload" as="image" type="image/webp" href={heroBgSrc.src} fetchpriority="high" />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={siteUrl} />
+  </head>
+  <body class="bg-black text-neutral-400 text-lg font-sans antialiased min-h-screen flex flex-col selection:bg-[#C5A03F] selection:text-black">
+    <slot />
+  </body>
+</html>
