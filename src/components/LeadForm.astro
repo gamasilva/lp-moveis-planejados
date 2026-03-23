@@ -29,115 +29,29 @@
         </div>
       </div>
       
-      <div class="flex-1 w-full bg-neutral-900 border border-neutral-800 rounded-xl p-8 relative flex flex-col">
-        <form id="lead-form" class="flex flex-col gap-8 w-full" action="#" method="POST">
-          <div class="flex flex-col w-full relative group">
-            <label for="nome" class="text-neutral-400 text-sm mb-2 font-bold tracking-tight">Seu Nome Completo</label>
-            <input 
-              type="text" 
-              id="nome" 
-              name="nome" 
-              required
-              class="w-full bg-black border border-neutral-800 rounded-xl py-4 px-4 text-white text-lg focus:outline-none focus:border-[#C5A03F] transition-colors"
-              placeholder="Ex: João da Silva"
-            />
-          </div>
-          
-          <div class="flex flex-col w-full relative group">
-            <label for="whatsapp" class="text-neutral-400 text-sm mb-2 font-bold tracking-tight">Seu WhatsApp</label>
-            <input 
-              type="tel" 
-              id="whatsapp" 
-              name="whatsapp" 
-              required
-              class="w-full bg-black border border-neutral-800 rounded-xl py-4 px-4 text-white text-lg focus:outline-none focus:border-[#C5A03F] transition-colors"
-              placeholder="(65) 90000-0000"
-            />
-          </div>
-          
-          <div class="flex flex-col w-full relative group">
-            <label for="ambiente" class="text-neutral-400 text-sm mb-2 font-bold tracking-tight">Ambiente Desejado</label>
-            <div class="relative w-full flex flex-col">
-              <select 
-                id="ambiente" 
-                name="ambiente" 
-                required
-                class="w-full bg-black border border-neutral-800 rounded-xl py-4 px-4 text-white text-lg focus:outline-none focus:border-[#C5A03F] transition-colors appearance-none cursor-pointer"
-              >
-                <option value="" disabled selected hidden>Qual ambiente você deseja planejar?</option>
-                <option value="Cozinha">Cozinha Gourmet</option>
-                <option value="Quarto">Dormitório / Closet</option>
-                <option value="Sala">Home Theater / Sala</option>
-                <option value="Banheiro">Banheiro</option>
-                <option value="Corporativo">Ambiente Corporativo</option>
-                <option value="Outro">Outro</option>
-              </select>
-              <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0 text-[#C5A03F]" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <button 
-            type="submit" 
-            id="submit-btn"
-            class="bg-[#C5A03F] text-black rounded-full px-8 py-4 flex items-center justify-center font-semibold w-full gap-2 transition-all hover:shadow-[0_0_15px_#C5A03F] mt-2"
-          >
-            <span>Falar com um Especialista</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      <div class="flex-1 w-full bg-neutral-900 border border-neutral-800 rounded-xl p-8 lg:p-12 relative flex flex-col items-center justify-center text-center">
+        <div class="mb-8">
+          <div class="w-20 h-20 bg-[#C5A03F]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-[#C5A03F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
-          </button>
-          <div id="form-msg" class="hidden text-lg mt-4 text-center font-bold tracking-tight w-full"></div>
-        </form>
+          </div>
+          <h3 class="text-2xl text-white font-bold mb-4">Prefere conversar agora?</h3>
+          <p class="text-neutral-400 mb-8 max-w-sm">
+            Clique no botão abaixo para iniciar uma conversa diretamente no nosso WhatsApp e tirar suas dúvidas em tempo real.
+          </p>
+        </div>
+
+        <a 
+          href="https://wa.me/556584772460" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="bg-[#C5A03F] text-black rounded-full px-10 py-5 flex items-center justify-center font-bold w-full sm:w-auto gap-3 transition-all hover:shadow-[0_0_20px_#C5A03F] hover:scale-105 active:scale-95 text-lg"
+        >
+          <span>Chamar no WhatsApp</span>
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </a>
       </div>
-    </div>
-  </div>
-</section>
 
-<script>
-  const form = document.getElementById('lead-form') as HTMLFormElement;
-  const msg = document.getElementById('form-msg');
-  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
-  const btnText = btn?.querySelector('span');
-
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-    }
-    
-    if (btnText) btnText.innerText = 'Enviando...';
-    
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      await fetch('https://n8n.seuservidor.com/webhook/landing-page-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      }).catch(err => console.log('Mock n8n webhook', err));
-      
-      await new Promise(resolve => setTimeout(resolve, 800));
-
-      if (msg && btnText) {
-        msg.classList.remove('hidden', 'text-red-500');
-        msg.classList.add('text-green-500');
-        msg.innerText = 'Solicitação enviada com sucesso! Logo entraremos em contato.';
-        btnText.innerText = 'Enviado';
-        form.reset();
-      }
-    } catch (error) {
-       if (msg && btnText) {
-        msg.classList.remove('hidden', 'text-green-500');
-        msg.classList.add('text-red-500');
-        msg.innerText = 'Erro ao enviar. Tente diretamente pelo WhatsApp.';
-        btnText.innerText = 'Tente Novamente';
-      }
-    }
-  });
-</script>
