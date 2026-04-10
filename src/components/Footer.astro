@@ -1,12 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import logoredonda from '../assets/logoredonda.png';
 ---
 <footer class="w-full py-20 bg-black border-t border-neutral-900 border-b-8 border-b-[#C5A03F] flex flex-col items-center">
   <div class="max-w-7xl mx-auto px-4 flex flex-col w-full">
     <div class="flex flex-col md:flex-row gap-12 justify-between mb-16 w-full">
       <div class="flex flex-col w-full md:max-w-sm">
-        <Image src={logoredonda} alt="Logotipo Modular Montagens Pensadas" format="webp" quality={80} width={96} height={96} class="w-24 h-24 mb-6 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" decoding="async" />
+        <h2 class="text-[#C5A03F] text-2xl font-heading font-bold mb-4 tracking-tight">Modular Montagens Pensadas</h2>
         <p class="text-neutral-400 text-lg mb-8">
           Elevando o padrão de montagem e mobiliário em Cuiabá. Design exclusivo, execução cirúrgica e atendimento prime da nossa equipe.
         </p>
@@ -35,9 +34,12 @@ import logoredonda from '../assets/logoredonda.png';
       </div>
     </div>
     
-    <div class="w-full pt-8 border-t border-neutral-900 flex flex-col md:flex-row items-center justify-between text-neutral-500 text-lg">
-      <p>&copy; {new Date().getFullYear()} Modular Montagens Pensadas. Todos os direitos reservados.</p>
-      <div class="mt-4 md:mt-0 flex flex-row items-center gap-6">
+    <div class="w-full pt-8 border-t border-neutral-900 flex flex-col md:flex-row items-center justify-between text-neutral-500 text-lg gap-6 text-center md:text-left">
+      <div class="flex flex-col gap-2">
+        <p>&copy; {new Date().getFullYear()} Modular Montagens Pensadas. Todos os direitos reservados.</p>
+        <p class="text-sm text-neutral-600">Desenvolvido por <a href="https://www.autosocialflow.com.br/" target="_blank" rel="noopener noreferrer" class="text-[#C5A03F] hover:text-white transition-colors">Auto Social Flow</a></p>
+      </div>
+      <div class="flex flex-row items-center gap-6">
         <a href="#" class="hover:text-[#C5A03F] transition-colors">Privacidade</a>
         <a href="#" class="hover:text-[#C5A03F] transition-colors">Termos de Uso</a>
       </div>

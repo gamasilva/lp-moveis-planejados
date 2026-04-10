@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import heroBg from '../assets/hero-bg.jpg';
-import loggomoveis from '../assets/loggomoveis.png';
+import logoHero from '../assets/logo_hero.png';
 ---
 
 <section
-  class="relative w-full min-h-[90vh] flex flex-col items-center justify-center pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-black"
+  class="relative w-full min-h-[100dvh] flex flex-col items-center justify-center py-10 md:py-20 overflow-hidden bg-black"
   id="hero"
 >
   <!-- Background Image Cover -->
@@ -36,26 +36,26 @@ import loggomoveis from '../assets/loggomoveis.png';
     class="max-w-7xl mx-auto px-4 flex flex-col relative z-10 w-full items-center text-center"
   >
     <Image
-      src={loggomoveis}
+      src={logoHero}
       alt="Logotipo Modular Montagens Pensadas"
       format="webp"
       quality={80}
-      widths={[200, 400]}
-      sizes="(max-width: 640px) 200px, 400px"
-      class="h-28 sm:h-48 md:h-72 mb-2 md:mb-6 object-contain drop-shadow-2xl scale-[2] sm:scale-200 md:scale-125"
+      widths={[300, 600]}
+      sizes="(max-width: 640px) 300px, 600px"
+      class="h-[160px] sm:h-48 md:h-72 mb-4 md:mb-8 object-contain drop-shadow-2xl"
       loading="eager"
       fetchpriority="high"
       decoding="async"
     />
     <h1
-      class="font-heading text-4xl sm:text-5xl md:text-6xl text-white font-bold tracking-tight mb-4 md:mb-6 max-w-4xl text-balance mt-4 sm:mt-0"
+      class="font-heading text-3xl sm:text-5xl md:text-6xl text-white font-bold tracking-tight mb-4 md:mb-6 max-w-4xl text-balance mt-2"
     >
-      Atrasos e Sujeira com Seus Móveis? Transforme Seu Projeto em Realidade em Tempo Recorde.
+      Móveis Planejados de Alto Padrão em Cuiabá e Várzea Grande.
     </h1>
     <p
-      class="text-neutral-200 text-base sm:text-lg md:text-xl font-sans mb-8 md:mb-10 max-w-2xl text-balance leading-relaxed"
+      class="text-neutral-200 text-base sm:text-lg md:text-xl font-sans mb-8 max-w-2xl text-balance leading-snug"
     >
-      Esqueça as desculpas e a dor de cabeça interminável. Somos especialistas na execução de projetos de móveis em Cuiabá e Várzea Grande. Trabalhamos com tecnologia avançada para entregar móveis planejados com precisão milimétrica, sem a poeira e o estresse do processo tradicional.
+      Projetos exclusivos com precisão milimétrica. Transforme seu ambiente com tecnologia avançada, acabamento premium e entrega garantida sem dor de cabeça.
     </p>
 
     <div class="flex items-center justify-center w-full">
@@ -66,7 +66,7 @@ import loggomoveis from '../assets/loggomoveis.png';
         aria-label="Solicitar orçamento pelo WhatsApp"
         class="bg-[#C5A03F] text-black rounded-full px-8 py-4 flex items-center justify-center font-semibold gap-2 hover:shadow-[0_0_15px_#C5A03F] transition-all w-full sm:w-auto"
       >
-        <span class="text-lg text-balance text-center">Faça o orçamento do seu projeto agora</span>
+        <span class="text-xl text-balance text-center">Fazer Orçamento</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-6 h-6 flex-shrink-0"

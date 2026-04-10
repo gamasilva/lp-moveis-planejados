@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import heroBgSrc from '../assets/hero-bg.jpg';
-import logoredonda from '../assets/logoredonda.png';
+import faviconRound from '../assets/favicon_round.png';
 
 interface Props {
   title: string;
@@ -17,7 +17,7 @@ const siteUrl = "https://moveisplanejadosluxo.com.br";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href={logoredonda.src} />
+    <link rel="icon" type="image/png" href={faviconRound.src} />
 
     <!-- Preload da imagem hero (LCP) -->
     <link rel="preload" as="image" type="image/webp" href={heroBgSrc.src} fetchpriority="high" />
@@ -25,6 +25,37 @@ const siteUrl = "https://moveisplanejadosluxo.com.br";
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={siteUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+    <!-- Reusing hero background for OpenGraph Image in absence of proper OG image -->
+    <meta property="og:image" content={new URL(heroBgSrc.src, siteUrl).href} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(heroBgSrc.src, siteUrl).href} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Modular Montagens Pensadas",
+      "image": new URL(faviconRound.src, siteUrl).href,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cuiabá",
+        "addressRegion": "MT",
+        "addressCountry": "BR"
+      },
+      "telephone": "6584772460",
+      "url": siteUrl
+    })} />
   </head>
   <body class="bg-black text-neutral-400 text-lg font-sans antialiased min-h-screen flex flex-col selection:bg-[#C5A03F] selection:text-black">
     <slot />
