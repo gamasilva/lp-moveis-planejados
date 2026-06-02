@@ -1,57 +1,323 @@
 ---
 const testimonials = [
-  { name: 'Ricardo Mendes', time: 'Há 2 semanas', text: 'Inacreditável como foi rápido. Aprovaram o projeto que meu arquiteto fez e montaram tudo sem sujar o meu apartamento. Precisão impecável do plano de corte!', rating: 5, initial: 'R' },
-  { name: 'Fernanda Albuquerque', time: 'Há 1 mês', text: 'A atenção aos detalhes e a montagem rápida garantem a excelência. A equipe executou os móveis da minha loja no prazo exato para a inauguração. Recomendo muito.', rating: 5, initial: 'F' },
-  { name: 'João Carlos Fonseca', time: 'Há 3 meses', text: 'Chegaram com tudo cortado e usinado, pronto para montar. Ferragens silenciosas e um capricho que você nota na primeira vez que abre as portas. Melhor escolha em Cuiabá.', rating: 5, initial: 'J' },
+  {
+    name: 'Zirlane Godoy',
+    meta: '14 avaliações • 2 fotos',
+    time: 'Há 9 semanas',
+    rating: 5,
+    text: 'Sérgio produz móveis perfeitos, práticos e encantador. Eu recomendo!',
+    initial: 'Z',
+    reply: {
+      author: 'Modular Montagens Pensadas',
+      role: 'Proprietário',
+      time: 'Há 9 semanas',
+      text: 'Muito obrigado'
+    }
+  },
+  {
+    name: 'David Moraes',
+    meta: '1 avaliação • 0 foto',
+    time: 'Há 10 semanas',
+    rating: 5,
+    text: 'A Modular Montagens Pensadas é uma empresa que se destaca pela qualidade e inteligência no desenvolvimento de soluções...',
+    initial: 'D',
+    reply: {
+      author: 'Modular Montagens Pensadas',
+      role: 'Proprietário',
+      time: 'Há 10 semanas',
+      text: 'Muito obrigado'
+    }
+  },
+  {
+    name: 'Victoriaaparecida Felix',
+    meta: '4 avaliações • 0 foto',
+    time: 'Há 10 semanas',
+    rating: 5,
+    text: 'Esse profissional é excelente. Atendimento impecável, muito satisfeita com o trabalho dele, super recomendo !',
+    initial: 'V',
+    reply: {
+      author: 'Modular Montagens Pensadas',
+      role: 'Proprietário',
+      time: 'Há 10 semanas',
+      text: 'Muito obrigado'
+    }
+  },
+  {
+    name: 'Roberto Azevedo',
+    meta: '6 avaliações • 0 foto',
+    time: 'Há 10 semanas',
+    rating: 5,
+    text: 'Serviço de 1° recomendo',
+    initial: 'R',
+    reply: {
+      author: 'Modular Montagens Pensadas',
+      role: 'Proprietário',
+      time: 'Há 10 semanas',
+      text: 'Obrigado'
+    }
+  },
+  {
+    name: 'Guia do Marceneiro',
+    meta: '1 avaliação • 0 foto',
+    time: 'Há 10 semanas',
+    rating: 5,
+    text: 'Excelente Trabalho!!!',
+    initial: 'G',
+    reply: {
+      author: 'Modular Montagens Pensadas',
+      role: 'Proprietário',
+      time: 'Há 10 semanas',
+      text: 'Muito obrigado'
+    }
+  },
+  {
+    name: 'Rose Roseli',
+    meta: '1 avaliação • 0 foto',
+    time: 'Há 10 semanas',
+    rating: 5,
+    text: 'Grande profissional o melhor super indico',
+    initial: 'R',
+    reply: {
+      author: 'Modular Montagens Pensadas',
+      role: 'Proprietário',
+      time: 'Há 10 semanas',
+      text: 'Muito obrigado'
+    }
+  }
 ];
 ---
 <section class="w-full py-24 bg-neutral-950 border-t border-neutral-900" id="depoimentos">
   <div class="max-w-7xl mx-auto px-4 flex flex-col items-center w-full">
     
-    <div class="text-center mb-16 flex flex-col items-center justify-center w-full">
-      <div class="flex items-center gap-2 px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-full mb-6">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" class="w-5 h-5 fill-white"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
-        <span class="text-white text-sm font-bold tracking-tight">Avaliações 5.0 no Google</span>
-      </div>
-      <h2 class="font-heading text-4xl sm:text-5xl text-white font-bold tracking-tight mb-4">Reconhecimento</h2>
-      <p class="text-neutral-400 text-lg">Atestados validados de quem respira diariamente a exclusividade da Modular Montagens Pensadas em Cuiabá.</p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
-      {testimonials.map((testimonial) => (
-        <div class="flex flex-col h-full bg-black border border-neutral-800 rounded-2xl p-8 hover:border-[#C5A03F]/30 hover:-translate-y-2 transition-all duration-300 shadow-xl group">
-          
-          <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-full bg-neutral-900 border border-neutral-700 flex items-center justify-center text-white font-bold text-xl font-heading shadow-inner">
-                {testimonial.initial}
-              </div>
-              <div class="flex flex-col">
-                <span class="text-white font-bold tracking-tight text-sm">{testimonial.name}</span>
-                <span class="text-neutral-500 text-xs font-semibold">{testimonial.time}</span>
-              </div>
-            </div>
-            <!-- Google "G" small icon -->
-            <div class="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center opacity-80">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" class="w-4 h-4 fill-white"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
-            </div>
-          </div>
-
-          <div class="flex gap-1 mb-4 text-[#C5A03F]">
-            {Array.from({ length: testimonial.rating }).map(() => (
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-          
-          <p class="text-neutral-300 text-base leading-relaxed flex-grow opacity-90">
-            "{testimonial.text}"
-          </p>
-          
+    <!-- Header of Section with Rating Statistics -->
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 w-full max-w-7xl mb-16">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded-full mb-4">
+          <!-- Small colored Google G icon -->
+          <svg viewBox="0 0 24 24" class="w-4 h-4 flex-shrink-0" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+          </svg>
+          <span class="text-neutral-300 text-xs font-bold tracking-wider uppercase">Avaliações 100% Reais</span>
         </div>
-      ))}
+        <h2 class="font-heading text-4xl sm:text-5xl text-white font-bold tracking-tight mb-4">Reconhecimento</h2>
+        <p class="text-neutral-400 text-lg max-w-xl">Atestados validados de quem respira diariamente a exclusividade e o compromisso da Modular Montagens Pensadas.</p>
+      </div>
+
+      <!-- Google Review Badge Summary Card -->
+      <div class="w-full lg:w-auto flex-shrink-0 bg-neutral-950 border border-neutral-900 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6 shadow-2xl relative overflow-hidden group">
+        <!-- Glow effect -->
+        <div class="absolute -inset-px bg-gradient-to-r from-[#C5A03F]/10 to-transparent rounded-2xl opacity-50 pointer-events-none"></div>
+        
+        <div class="text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start gap-2">
+            <span class="text-white text-5xl font-heading font-black leading-none">5.0</span>
+            <div class="flex flex-col">
+              <div class="flex text-[#C5A03F]">
+                {Array.from({ length: 5 }).map(() => (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span class="text-neutral-500 text-xs mt-1 font-semibold">Nota máxima no Google</span>
+            </div>
+          </div>
+          <p class="text-neutral-400 text-xs mt-3">Recomendado por 100% dos clientes avaliados.</p>
+        </div>
+
+        <div class="w-px h-12 bg-neutral-900 hidden sm:block"></div>
+
+        <a
+          href="https://g.page/r/CWSQ8bdnGobIEBM/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-neutral-900 border border-neutral-800 text-white rounded-full px-6 py-3 flex items-center justify-center font-semibold text-sm gap-2 hover:bg-[#C5A03F] hover:text-black hover:border-transparent transition-all duration-300 w-full sm:w-auto cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold focus:outline-none min-h-[44px]"
+          aria-label="Conferir todas as avaliações reais no Google Reviews"
+        >
+          <span>Conferir no Google</span>
+          <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Testimonials Carousel Container -->
+    <div class="relative w-full max-w-7xl mt-4 group/carousel">
+      
+      <!-- Carousel Track -->
+      <div 
+        id="carousel-track"
+        class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-2 select-none"
+      >
+        {testimonials.map((t) => (
+          <div class="w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-start flex flex-col justify-between h-full bg-neutral-950 border border-neutral-900 rounded-2xl p-6 hover:border-[#C5A03F]/20 transition-all duration-300 shadow-xl relative overflow-hidden">
+            
+            <div>
+              <!-- Header of card -->
+              <div class="flex items-start justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#C5A03F] font-bold text-base font-heading shadow-inner">
+                    {t.initial}
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-white font-bold tracking-tight text-sm">{t.name}</span>
+                    <span class="text-neutral-500 text-xs font-semibold">{t.meta}</span>
+                  </div>
+                </div>
+                
+                <!-- Small Google G icon -->
+                <div class="w-7 h-7 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center opacity-60">
+                  <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" aria-hidden="true">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Rating Stars and Time -->
+              <div class="flex items-center gap-2 mb-3">
+                <div class="flex text-[#C5A03F]">
+                  {Array.from({ length: t.rating }).map(() => (
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-neutral-500 text-xs font-semibold">{t.time}</span>
+              </div>
+
+              <!-- Review Text -->
+              <p class="text-neutral-300 text-sm leading-relaxed opacity-95">
+                "{t.text}"
+              </p>
+            </div>
+
+            <!-- Owner Response Reply Box -->
+            {t.reply && (
+              <div class="mt-5 p-4 bg-neutral-900/30 border-l border-[#C5A03F]/40 rounded-r-xl rounded-bl-xl text-xs space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-white font-bold">{t.reply.author}</span>
+                  <span class="text-neutral-500 text-[10px] font-semibold">{t.reply.time}</span>
+                </div>
+                <span class="text-neutral-500 block text-[10px] uppercase font-bold tracking-widest">{t.reply.role}</span>
+                <p class="text-neutral-300 leading-relaxed italic mt-1">
+                  "{t.reply.text}"
+                </p>
+              </div>
+            )}
+            
+          </div>
+        ))}
+      </div>
+
+      <!-- Navigation Arrows (Desktop) -->
+      <div class="hidden md:flex justify-center items-center gap-4 mt-8">
+        <button
+          id="prev-btn"
+          class="w-12 h-12 rounded-full border border-neutral-800 bg-neutral-950 hover:bg-neutral-900 hover:border-[#C5A03F]/40 flex items-center justify-center text-white transition-all cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A03F] min-h-[44px] min-w-[44px]"
+          aria-label="Avaliação anterior"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          id="next-btn"
+          class="w-12 h-12 rounded-full border border-neutral-800 bg-neutral-950 hover:bg-neutral-900 hover:border-[#C5A03F]/40 flex items-center justify-center text-white transition-all cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A03F] min-h-[44px] min-w-[44px]"
+          aria-label="Próxima avaliação"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Pagination Dots (Mobile) -->
+      <div class="flex md:hidden justify-center items-center gap-2 mt-6" id="carousel-dots">
+        {testimonials.map((_, index) => (
+          <button
+            class="w-2.5 h-2.5 rounded-full bg-neutral-800 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A03F] min-h-[12px] min-w-[12px]"
+            data-index={index}
+            aria-label={`Ir para avaliação ${index + 1}`}
+          ></button>
+        ))}
+      </div>
+
     </div>
     
   </div>
 </section>
+
+<!-- Scoped Styles to hide scrollbar -->
+<style>
+  #carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  #carousel-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+<!-- Carousel Script -->
+<script>
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const dots = document.querySelectorAll('#carousel-dots button');
+
+  if (track) {
+    const getScrollStep = () => {
+      const firstSlide = track.querySelector('div');
+      return firstSlide ? firstSlide.offsetWidth + 24 : 320; // slide width + gap
+    };
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+      });
+    }
+
+    const updateActiveDot = () => {
+      const scrollPosition = track.scrollLeft;
+      const slideWidth = getScrollStep();
+      const activeIndex = Math.round(scrollPosition / slideWidth);
+      
+      dots.forEach((dot, index) => {
+        if (index === activeIndex) {
+          dot.classList.remove('bg-neutral-800');
+          dot.classList.add('bg-[#C5A03F]', 'w-5');
+        } else {
+          dot.classList.remove('bg-[#C5A03F]', 'w-5');
+          dot.classList.add('bg-neutral-800');
+        }
+      });
+    };
+
+    // Track scroll events
+    track.addEventListener('scroll', updateActiveDot);
+    
+    // Initialize active dot status
+    updateActiveDot();
+
+    // Dot navigation click handlers
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.getAttribute('data-index') || '0', 10);
+        const slideWidth = getScrollStep();
+        track.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
+      });
+    });
+  }
+</script>
+
